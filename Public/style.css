@@ -179,7 +179,9 @@ button, input[type="text"]{
   position: absolute;
   top: 0;
   right: 0;
-  padding: none;
+  margin: 0;
+  width: 100vw;
+  text-align: right;
 }
 
 #nav button{
@@ -191,4 +193,42 @@ button, input[type="text"]{
   visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+a{
+  color: var(--text);
+  transition: color 1s ease;
+}
+
+#cred{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .raid{
+    width: 80vw;
+  }
+
+  #nav{
+    text-align: center;
+  }
+
+  h1{
+    margin-top: 30px;
+  }
+  
+  .menu{
+    max-width: 80vw;
+    width: 80vw;
+    max-height: 75%;
+    height: 75%;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%);
+  }
 }
