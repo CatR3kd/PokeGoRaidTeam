@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pokemon Go Raid Tool</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="favicon.png" type="image/png">
+  </head>
+  <body align="center" class="light-theme">
+    <h1>Current Pokemon Go raids:</h1>
+    <div id="menuShadow">
+      <div class="menu" id="raidMenu">
+        <h3 id="raidBoss">Joining a  raid</h3>
+        <p id="friendCode">Add the host to your friend list in-game with their friend code: <b></b></p>
+        <br>
+        <h4>Don't want to join a raid?</h4>
+        <button onclick="openCreateMenu();">Host a raid</button><p> or </p><button onclick="back();">Back</button>
+      </div>
+      <div class="menu" id="createMenu">
+        <h3 id="createBoss">Creating a  raid</h3>
+        <br>
+        <p>Enter your friend code:</p>
+        <input type="text" id="codeInput"></input>
+        <br>
+        <br>
+        <button onclick="createRaid();">Create</button>
+        <p> or </p><button onclick="back();">Back</button>
+      </div>
+      <div class="menu" id="instructions">
+        <h3>About</h3>
+        <br>
+        <p>The PokeRaidTeam app was created by CatR3kd for fun, but turned into a fully-functional app for finding raid teams in Pokemon Go.</p>
+        <br>
+        <p>To use this website, you can host or join players in raids in Pokemon Go by clicking on any of the current raids and joining via the provided friend code or hosting a raid yourself.<br>Some things to note:</p>
+        <br>
+        <ul>
+          <li><b>Do not</b> send strangers in Pokemon Go gifts, as they will be able to see where you are sending them from.</li>
+          <li>If you host a raid, all players <i>will</i> be able to see where you are hosting it from.</li>
+          <li>Our website uses third-party API's to obtain raid information, and some or all information may be updated late.</li>
+        </ul>
+        <br>
+        <button onclick="back();">Back</button>
+      </div>
+    </div>
+    <div id="container">
+      <ul id="raidList">
+      </ul>
+    </div>
+    <div id="nav">
+      <button onclick="toggleTheme();">Toggle Theme</button>
+      <button onclick="openInstructions();">About</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/antiautoclick@1.0.6/antiautoclick.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
