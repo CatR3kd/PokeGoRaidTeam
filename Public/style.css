@@ -72,6 +72,10 @@ body{
   justify-content: center;
 }
 
+.raid:hover{
+  cursor: pointer;
+}
+
 .raid > *{
   display: flex;
 }
@@ -189,6 +193,10 @@ button, input[type="text"]{
   border: none;
 }
 
+#nav button:hover{
+  cursor: pointer;
+}
+
 #instructions{
   visibility: hidden;
   overflow-x: hidden;
@@ -205,7 +213,7 @@ a{
   bottom: 0;
   right: 0;
   font-size: 12px;
-  margin: 0;
+  margin: 0 5px;
 }
 
 @media (max-width: 600px) {
